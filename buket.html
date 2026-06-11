@@ -1,0 +1,214 @@
+<iostream>
+<string>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouquet Showcase</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Latar Belakang Pink Aesthetic Pastel */
+        body {
+            background-color: #FFE5EC;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        /* Container Utama: Desain Vertikal Mirip Aplikasi Milkshake / Tampilan HP */
+        .milkshake-container {
+            background: #FFFFFF;
+            width: 100%;
+            max-width: 430px; /* Lebar standar layar hp agar presisi */
+            min-height: 90vh;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(251, 111, 146, 0.2);
+            overflow: hidden;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Profil Toko / Header atas */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-header h1 {
+            font-size: 1.8rem;
+            color: #FB6F92;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .profile-header p {
+            font-size: 0.9rem;
+            color: #9381ff;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        /* Grid Produk ala Showcase TikTok/Shopee */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 1 Kolom  */
+            gap: 15px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        /* Card Produk yang Rapi */
+        .product-card {
+            background: #FFF0F5;
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #FFC2D1;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Bingkai Foto di Tengah Card */
+        .image-wrapper {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Membuat foto otomatis kotak sempurna */
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #FFF;
+            margin-bottom: 10px;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Foto tetap rapi di tengah walaupun ukurannya beda */
+        }
+
+        /* Detail Produk */
+        .product-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #4A3E3D;
+            text-align: center;
+            line-height: 1.3;
+            height: 35px; /* Batas tinggi text agar sejajar */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-price {
+            font-size: 0.95rem;
+            color: #FB6F92;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* Tombol Beli per Produk */
+        .btn-buy {
+            background: #FFB3C6;
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 15px;
+            border-radius: 15px;
+            width: 100%;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .btn-buy:hover {
+            background: #FB6F92;
+        }
+
+        /* Footer Link Hubungi Admin (Ciri Khas Milkshake App) */
+        .footer-link {
+            margin-top: auto;
+            width: 100%;
+            background: #FB6F92;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(251, 111, 146, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="milkshake-container">
+        
+        <div class="profile-header">
+            <h1>@jeaflorist</h1>
+            <p>🌸 Premium & Aesthetic Flower Bouquet 🌸</p>
+        </div>
+
+        <div class="showcase-grid">
+            
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://i.postimg.cc/VLg0khX6/IMG-7258.jpg" alt="Buket 1">
+                </div>
+                <div class="product-title">Thumbelina Mini</div>
+                <div class="product-price">Rp 42.000</div>
+                <a href="https://wa.me/6285788222874" class="btn-buy" target="_blank">Pesan</a>
+            </div>
+
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://i.postimg.cc/tJ1v46mK/IMG-6216.jpg" alt="Buket 2">
+                </div>
+                <div class="product-title">Daisy pink mini</div>
+                <div class="product-price">Rp 55.000</div>
+                <a href="https://wa.me/6285788222874" class="btn-buy" target="_blank">Pesan</a>
+            </div>
+
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://i.postimg.cc/8PXWb3cH/IMG-5996.jpg" alt="Buket 3">
+                </div>
+                <div class="product-title">Tulip mini</div>
+                <div class="product-price">PO </div>
+                <a href="https://wa.me/6285788222874" class="btn-buy" target="_blank">Pesan</a>
+            </div>
+
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://i.postimg.cc/43xxF40t/IMG-7240.jpg" alt="Buket 4">
+                </div>
+                <div class="product-title">Daisy Bouquet mini </div>
+                <div class="product-price">Rp 62.000</div>
+                <a href="https://wa.me/6285788222874" class="btn-buy" target="_blank">Pesan</a>
+            </div>
+
+        </div>
+
+        <a href="https://wa.me/6285788222874" class="footer-link" target="_blank">Order Custom Via WhatsApp ✨</a>
+
+    </div>
+
+</body>
+</html>
